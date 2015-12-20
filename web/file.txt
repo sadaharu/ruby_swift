@@ -1,0 +1,6 @@
+Date=2015/12/20
+Address=Ageo Saitama Japan
+Title=This is first ruby programming I created
+
+
+

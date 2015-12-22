@@ -1,5 +1,4 @@
-#!/usr/local/bin/ruby
-
+#!/Users/administrator/.rbenv/shims/ruby
 require "JSON"
 
 FILE = "file.txt"
@@ -14,6 +13,10 @@ File.open(FILE).each do |line|
 end 
 p text_ary
 
-puts JSON.generate(text_ary)
+cgi = CGI.new
+cgi.header(
+    "status" => "OK",
+    "server" =>"ENV{'SERVER_SOFTWARE'}"
 
-
+)
+puts JSON.generate(text_ary) 
